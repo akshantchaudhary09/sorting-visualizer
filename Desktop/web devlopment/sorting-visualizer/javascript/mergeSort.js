@@ -24,7 +24,7 @@ async function merge(l, m, r) {
             let t2 = m+1+j;
             document.getElementById("p"+t1).style.backgroundColor = "red";
             document.getElementById("p"+t2).style.backgroundColor = "red";
-            await sleep(100);
+            await sleep(algoSpeed+50);
             if (leftArray[i] >= rightArray[j]) {
                 array[k] = rightArray[j];
                 document.getElementById("p" + k).style.height = rightArray[j]*6 + "px";
@@ -56,7 +56,7 @@ async function merge(l, m, r) {
 }
 
 async function mergeSort(l, r) {
-    await sleep(10);
+    await sleep(algoSpeed);
     if (l < r) {
         var m = Math.floor((l + r) / 2);
         await mergeSort(l, m);
