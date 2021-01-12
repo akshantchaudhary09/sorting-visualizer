@@ -11,7 +11,7 @@ async function insertionSort(){
         {
           document.getElementById("p"+i).style.backgroundColor = "red";
           document.getElementById("p"+j).style.backgroundColor = "red";
-          await sleep(1000);
+          await sleep(algoSpeed);
 
             array[j + 1] = array[j];
             let k = j+1;
@@ -26,9 +26,5 @@ async function insertionSort(){
         array[j + 1] = key;
         let m = j+1;
         document.getElementById("p"+m).style.height = key1;
-        // for(let l=0;l<=i;l++){
-        //   document.getElementById("p"+l).style.backgroundColor = "blue";
-        // }
-
     }
 }
