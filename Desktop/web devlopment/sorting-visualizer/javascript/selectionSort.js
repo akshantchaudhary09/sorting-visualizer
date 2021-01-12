@@ -1,4 +1,5 @@
 async function selectionSort(){
+
   var i, j, min_idx;
 
   for (i = 0; i < array.length-1; i++)
@@ -8,7 +9,7 @@ async function selectionSort(){
       for (j = i+1; j < array.length; j++) {
         document.getElementById("p"+j).style.backgroundColor = "red";
         document.getElementById("p"+i).style.backgroundColor = "red";
-        await sleep(10);
+        await sleep(algoSpeed);
         if (array[j] < array[min_idx]){
             min_idx = j;
         }
@@ -19,7 +20,7 @@ async function selectionSort(){
 
       document.getElementById("p"+min_idx).style.backgroundColor = "green";
       document.getElementById("p"+i).style.backgroundColor = "green";
-      await sleep(1000);
+      await sleep(algoSpeed);
       document.getElementById("p"+min_idx).style.backgroundColor = "purple";
       document.getElementById("p"+i).style.backgroundColor = "green";
       let temp = array[min_idx];
