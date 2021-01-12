@@ -1,0 +1,50 @@
+html, body{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+h2{
+  font-family: cursive;
+  color: white;
+}
+
+.size{
+  font-family: cursive;
+  color: white;
+}
+
+.btn{
+  border-radius: 8px;
+  /* background-color: #99c2ff; */
+  background-color: #ff5c33;
+  border: none;
+  font-size: 20px;
+  font-family: cursive;
+  padding: 6px 20px;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.sortRectangle{
+  background-color: purple;
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+#container1{
+  margin: 0;
+  background-color: grey;
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+#container2{
+  margin: 0;
+  height: 100%;
+}
