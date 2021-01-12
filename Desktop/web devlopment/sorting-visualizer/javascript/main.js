@@ -1,21 +1,54 @@
 const array = [];
-
-document.querySelector(".btn-generateRandomArray").addEventListener("click", function (){
+let  algoSpeed;
+document.querySelector(".btn-generateRandomArray").addEventListener("click", async function (){
   generateNewArray();
 });
-document.querySelector(".btn-selection").addEventListener("click", function (){
-  selectionSort();
+document.querySelector(".btn-selection").addEventListener("click", async function (){
+  disableButtons();
+  algoSpeed = 100/document.querySelector(".algoSpeed").value;
+  await selectionSort();
+  enableButtons();
 });
-document.querySelector(".btn-merge").addEventListener("click", function (){
-  mergeSort(0, array.length-1);
+document.querySelector(".btn-merge").addEventListener("click", async function (){
+  disableButtons();
+  algoSpeed = 100/document.querySelector(".algoSpeed").value;
+  await mergeSort(0, array.length-1);
+  enableButtons();
 });
-document.querySelector(".btn-bubble").addEventListener("click", function (){
-  bubbleSort();
+document.querySelector(".btn-bubble").addEventListener("click", async function (){
+  disableButtons();
+  algoSpeed = 100/document.querySelector(".algoSpeed").value;
+  await bubbleSort();
+  enableButtons();
 });
-document.querySelector(".btn-insertion").addEventListener("click", function (){
-  insertionSort();
+document.querySelector(".btn-insertion").addEventListener("click", async function (){
+  disableButtons();
+  algoSpeed = 100/document.querySelector(".algoSpeed").value;
+  await insertionSort();
+  enableButtons();
 });
 
+function disableButtons() {
+  let numberOfButtons = document.querySelectorAll(".btn").length;
+  document.querySelector(".algoSpeed").classList.add("disabled");
+  document.querySelector(".arraySize").classList.add("disabled");
+  let buttons = document.querySelectorAll(".btn");
+  for(let s=0;s<numberOfButtons;s++){
+    buttons[s].disabled = true;
+    buttons[s].classList.add("disabled");
+  }
+}
+
+function enableButtons() {
+  let numberOfButtons = document.querySelectorAll(".btn").length;
+  document.querySelector(".algoSpeed").classList.remove("disabled");
+  document.querySelector(".arraySize").classList.remove("disabled");
+  let buttons = document.querySelectorAll(".btn");
+  for(let s=0;s<numberOfButtons;s++){
+    buttons[s].disabled = false;
+    buttons[s].classList.remove("disabled");
+  }
+}
 
 function include(file) {
 
