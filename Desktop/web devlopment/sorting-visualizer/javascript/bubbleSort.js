@@ -5,12 +5,12 @@ async function bubbleSort(){
         document.getElementById("p"+j).style.backgroundColor = "red";
         let m = j+1;
         document.getElementById("p"+m).style.backgroundColor = "red";
-        await sleep(10);
+        await sleep(algoSpeed);
           if (array[j] > array[j + 1]) {
             let k = j+1;
             document.getElementById("p"+j).style.backgroundColor = "green";
             document.getElementById("p"+k).style.backgroundColor = "green";
-            await sleep(10);
+            await sleep(algoSpeed);
               let tmp = array[j];
               let tmp1 = document.getElementById("p"+j).style.height;
               array[j] = array[j + 1];
