@@ -1,6 +1,6 @@
 # sorting-visualizer
 
-Visualizes different sorting algorithms using rectangles and a variety of colors.
+Visualizes different sorting algorithms using rectangular bars and a variety of colors.
 
 # Steps to run the app
 
